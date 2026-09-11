@@ -35,7 +35,7 @@ public class AppointmentServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private final AppointmentDAO appointmentDAO = new AppointmentDAO();
     private final AppointmentFactory appointmentFactory = new AppointmentFactory();
-    private final Gson gson = new Gson();
+    private final Gson gson = util.GsonUtil.getGson();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

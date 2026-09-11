@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private final StaffDAO staffDAO = new StaffDAO();
-    private final Gson gson = new Gson();
+    private final Gson gson = util.GsonUtil.getGson();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

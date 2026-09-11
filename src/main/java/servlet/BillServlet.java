@@ -29,7 +29,7 @@ public class BillServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private final BillDAO billDAO = new BillDAO();
     private final BillFactory billFactory = new BillFactory();
-    private final Gson gson = new Gson();
+    private final Gson gson = util.GsonUtil.getGson();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
